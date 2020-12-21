@@ -1,5 +1,8 @@
 package com.example.music_app.Activity
-
+/**
+ *
+ *Created by Sokheng :12/21/2020
+ * **/
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
