@@ -17,7 +17,7 @@ class SpaceDecoration(
     private val rightSpace: Int = 0,
     private val bottomSpace: Int = 0,
     private val skipFirst: Boolean = true
-): RecyclerView.ItemDecoration() {
+) : RecyclerView.ItemDecoration() {
     override fun getItemOffsets(
         outRect: Rect,
         view: View,
@@ -30,5 +30,3 @@ class SpaceDecoration(
         }
     }
 }
-
-

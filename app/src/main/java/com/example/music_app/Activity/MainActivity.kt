@@ -13,28 +13,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
+        //  AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         val navigation = findViewById<BottomNavigationView>(R.id.buttom_navigation)
-        navigation.setOnNavigationItemSelectedListener {item ->
-            when(item.itemId){
-                R.id.action_home ->{
-                    val fragment_home= FragmentHome()
-                    supportFragmentManager.beginTransaction().replace(R.id.container,fragment_home).commit()
+        navigation.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.action_home -> {
+                    val fragment_home = FragmentHome()
+                    supportFragmentManager.beginTransaction().replace(R.id.container, fragment_home).commit()
                     true
                 }
-                R.id.action_search ->{
-                    val fragment_search= FragmentSearch()
-                    supportFragmentManager.beginTransaction().replace(R.id.container,fragment_search).commit()
+                R.id.action_setting -> {
+                    val fragment_search = FragmentSearch()
+                    supportFragmentManager.beginTransaction().replace(R.id.container, fragment_search).commit()
                     true
                 }
-                R.id.action_favorite ->{
-                    val fragment_favorite= FragmentFavorite()
-                    supportFragmentManager.beginTransaction().replace(R.id.container,fragment_favorite).commit()
+                R.id.action_favorite -> {
+                    val fragment_favorite = FragmentFavorite()
+                    supportFragmentManager.beginTransaction().replace(R.id.container, fragment_favorite).commit()
                     true
                 }
 
                 else -> false
             }
         }
-        navigation.selectedItemId= R.id.action_home
+        navigation.selectedItemId = R.id.action_home
     }
 }

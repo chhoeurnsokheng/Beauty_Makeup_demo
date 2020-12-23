@@ -1,0 +1,25 @@
+Database : Room ,Realm and SQLite
+
+***Room  :database layer on top of SQlite, Provides as abstract layer over SQLite to allow fluent database access
+ - object Relation Mapping (ORM) library .
+ - Use case : Easy caching of relevant pieces of data
+
+
+SQlite : Deal with raw queries , no compile time verification of raw SQL Queries
+        lot of boilerplate code to convert between SQl queries and java data object
+        SQlite API are low-level , so more time , more effort to build apps
+*****
+ Room : No raw queries, compile-time checks of SQlite statement .
+        Maps database object and java object without boilerplate code .
+        Room  when used with ViewModel and LiveData makes it easy .
+
+*****
+ Entities :
+   - Defines schema of database table
+   - Annotated with @Entity
+ DAO  :
+   - Contains methods to access databas
+   - Annotated with @Dao
+  Database :
+   - database holder class
+   - Annotated with @Database
